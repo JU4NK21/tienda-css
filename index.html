@@ -10,20 +10,87 @@
         div{
             border: 1px solid black;
         }
+        label{
+            display: block;
+        }
+        input{
+            display: block;
+            align-content: center;
+            width: 30%;
+        }
+        /* seccion de selectores de clase --> se repiten */
+        .contenedor_general{
+            background-color: rgb(23, 182, 196);
+        }
+
+        .titulo_texto{
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .contenedor_hijo{
+            position: relative;
+            background-color: rgb(69, 211, 109);
+            width: 80%;
+            margin: 0 auto;
+            margin-bottom: 3%;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+            align-self: center;
+            vertical-align: middle;
+            
+        }
+
+        /* seccin de selectores tipo Id */
+        #contenedor_texto{
+            color:rgb(109, 20, 233);
+            font-size: 30px;
+            text-shadow: 3px 4px 5px yellowgreen;
+        }
+        #imagen_perfil{
+            position: relative;
+            top: 5%;
+            height: 200px;
+            width: 40%;
+            margin: 0 auto;
+            border-radius: 50%;
+            text-align: center;
+            align-content: center;
+            
+            border: 4px solid rgb(60, 0, 255);
+        }
     </style>
 </head>
 <body>
     <!--Es todo lo que ve el usuario-->
     <!--div>div*2-->
-    <div>
+    <div class="contenedor_general">
         <!--Contenedor padre-->
-        <div>
+        <div class="contenedor_hijo">
             <!--Contenedor hijo imagen de sesion-->
-            <div>imagen</div>
-            <h2>Iniciar Sesion</h2>
+            <div id="imagen_perfil">imagen</div>
+            <h2 id="contenedor_texto" class="titulo_texto">Iniciar Sesion</h2>
+            
         </div>
-        <div>
+        <div class="contenedor_hijo">
             <!--contenedor hijo de los datos de sesion-->
+            <div>
+                <h2 class="titulo_texto">Datos de la sesion</h2>
+                <label>Usuario:</label>
+                <input type="text">
+           
+                <label>Clave:</label>
+                <input type="text">
+                <br>
+                <br>
+            </div>
+            <div>
+                <button>Iniciar</button>
+                <button>Regresar</button>
+                <h4>Olivido su contraseña??</h4>
+            </div>
         </div>
     </div>
 </body>
