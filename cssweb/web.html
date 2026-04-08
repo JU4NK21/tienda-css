@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesion Pro</title>
+    <style>
+        /* zona de css estilos */
+        div {
+            border: 1px solid rgba(0, 0, 0, 0.1); /* Borde más suave */
+        }
+        
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input {
+            display: block;
+            width: 80%; /* Ajustado para el contenedor lateral */
+            padding: 8px;
+            margin: 0 auto;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* seccion de selectores de clase */
+        .contenedor_general {
+            background-color: rgb(23, 182, 196);
+            display: flex; /* Activamos Flexbox para poner hijos de lado a lado */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Centrado vertical en toda la pantalla */
+        }
+
+        .titulo_texto {
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .contenedor_hijo_principal {
+            background-color: rgb(69, 211, 109);
+            width: 70%; /* Ancho para PC */
+            display: flex; /* Hace que el contenido interno sea horizontal */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Sub-contenedores para dividir izquierda y derecha */
+        .seccion_izquierda, .seccion_derecha {
+            flex: 1; /* Ambos ocupan el mismo espacio */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* seccion de selectores tipo Id */
+        #contenedor_texto {
+            color: rgb(109, 20, 233);
+            font-size: 35px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        #imagen_perfil {
+            height: 200px;
+            width: 200px; /* Tamaño fijo para que sea un círculo perfecto */
+            border-radius: 50%;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 6px solid rgb(60, 0, 255);
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border: none;
+            background-color: rgb(60, 0, 255);
+            color: white;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: rgb(109, 20, 233);
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor_general">
+        <div class="contenedor_hijo_principal">
+            
+            <div class="seccion_izquierda">
+                <div id="imagen_perfil">IMAGEN</div>
+                <h2 id="contenedor_texto" class="titulo_texto">Iniciar Sesión</h2>
+            </div>
+
+            <div class="seccion_derecha">
+                <h2 class="titulo_texto">Datos de la sesión</h2>
+                
+                <label>Usuario:</label>
+                <input type="text" placeholder="Ingresa tu usuario">
+           
+                <label>Clave:</label>
+                <input type="password" placeholder="Ingresa tu clave">
+
+                <div style="border: none; margin-top: 20px;">
+                    <button>Iniciar</button>
+                    <button style="background-color: gray;">Regresar</button>
+                </div>
+                
+                <h4 style="cursor: pointer; color: blue; text-decoration: underline;">
+                    ¿Olvidó su contraseña?
+                </h4>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
